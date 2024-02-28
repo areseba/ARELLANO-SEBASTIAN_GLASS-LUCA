@@ -6,6 +6,17 @@ public class Odontologo {
     private String nombre;
     private String appellido;
 
+    public Odontologo() {
+
+    }
+
+    public Odontologo(String matricula, String nombre, String appellido) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.appellido = appellido;
+    }
+
+
     public Integer getId() {
         return id;
     }
@@ -38,10 +49,5 @@ public class Odontologo {
         this.appellido = appellido;
     }
 
-    public Odontologo(Integer id, String matricula, String nombre, String appellido) {
-        this.id = id;
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.appellido = appellido;
-    }
+
 }
