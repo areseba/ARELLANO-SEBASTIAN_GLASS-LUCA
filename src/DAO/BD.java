@@ -7,6 +7,7 @@ import java.sql.Statement;
 
 public class BD {
 
+    //Creamos la base de datos
     private static final String SQL_CREATE_TABLE = "DROP TABLE IF EXISTS ODONTOLOGO;" +
             "CREATE TABLE ODONTOLOGO (" +
             "ID INT AUTO_INCREMENT PRIMARY KEY," +
@@ -15,11 +16,14 @@ public class BD {
             "APELLIDO VARCHAR(100) NOT NULL" +
             ")";
 
+    //Creamos la conexion
     public static Connection getConnection() throws Exception{
         Class.forName("org.h2.Driver");
         return DriverManager.getConnection("jdbc:h2:./BD_REGISTRO_ODONTOLOGO",
                 "sa", "sa");
     }
+
+    //creamos la tabla
     public static void createTable(){
         Connection connection = null;
 

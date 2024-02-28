@@ -6,6 +6,7 @@ public class Odontologo {
     private String nombre;
     private String appellido;
 
+    //constructores
     public Odontologo() {
 
     }
@@ -16,7 +17,7 @@ public class Odontologo {
         this.appellido = appellido;
     }
 
-
+    //getters y setters
     public Integer getId() {
         return id;
     }

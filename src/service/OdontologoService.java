@@ -11,10 +11,11 @@ public class OdontologoService {
 
     private IDao<Odontologo> odontologoIDao;
 
+    //constructor y lo iniciamos
     public OdontologoService(){
         this.odontologoIDao = new OdontologoIDAOH2();
     }
-
+    //creamos los metodos
     public Odontologo guardar(Odontologo e){
         //delegar la responsabilidad de guardar al DAO
         return odontologoIDao.guardar(e);

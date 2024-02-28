@@ -12,21 +12,24 @@ import java.util.List;
 
 public class OdontologoIDAOH2 implements IDao<Odontologo> {
 
+    //conectamos logger
     private static Logger LOGGER = Logger.getLogger(OdontologoIDAOH2.class);
 
+    //creamos el string del crud
     private static final String SQL_INSERT = "INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?)";
 
     private static final String SQL_SELECT = "SELECT * FROM ODONTOLOGO WHERE id = ?";
 
     private static final String SQL_SELECT_ALL = "SELECT * FROM ODONTOLOGO";
 
+    //sobrescribimos los metodos
     @Override
     public Odontologo guardar(Odontologo odontologo) {
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        //1 levantar el driver y contactarnos
+        //levantamos el driver el driver y contactarnos
         try {
             connection = BD.getConnection();
 
