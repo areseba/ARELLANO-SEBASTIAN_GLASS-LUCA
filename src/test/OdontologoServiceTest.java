@@ -1,9 +1,10 @@
-package service;
+package test;
 
 import DAO.BD;
 import modelo.Odontologo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import service.OdontologoService;
 
 import java.util.List;
 
