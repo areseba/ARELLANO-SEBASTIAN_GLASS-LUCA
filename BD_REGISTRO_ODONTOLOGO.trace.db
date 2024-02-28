@@ -1,0 +1,32 @@
+2024-02-27 22:57:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP [*]IF EXISTS ODONTOLOGO,CREATE TABLE ODONTOLOGO (ID INT AUTO_INCREMENT PRIMARY KEY,MATRICULA VARCHAR(100) NOT NULL,NOMBRE VARCHAR(100) NOT NULL,APELLIDO VARCHAR(100) NOT NULL)"; se esperaba "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "DROP [*]IF EXISTS ODONTOLOGO,CREATE TABLE ODONTOLOGO (ID INT AUTO_INCREMENT PRIMARY KEY,MATRICULA VARCHAR(100) NOT NULL,NOMBRE VARCHAR(100) NOT NULL,APELLIDO VARCHAR(100) NOT NULL)"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP IF EXISTS ODONTOLOGO,CREATE TABLE ODONTOLOGO (ID INT AUTO_INCREMENT PRIMARY KEY,MATRICULA VARCHAR(100) NOT NULL,NOMBRE VARCHAR(100) NOT NULL,APELLIDO VARCHAR(100) NOT NULL) [42001-214]
+2024-02-27 22:57:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [42104-214]
+2024-02-27 22:57:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [42104-214]
+2024-02-27 22:57:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+SELECT * FROM ODONTOLOGO WHERE id = ? [42104-214]
+2024-02-27 22:57:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ODONTOLOGO" not found (this database is empty); SQL statement:
+SELECT * FROM ODONTOLOGO [42104-214]
+2024-02-27 22:59:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Glass' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"
+Data conversion error converting "'Glass' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [22018-214]
+2024-02-27 22:59:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Arellano' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"
+Data conversion error converting "'Arellano' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [22018-214]
+2024-02-27 23:01:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Glass' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"
+Data conversion error converting "'Glass' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [22018-214]
+2024-02-27 23:01:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'Arellano' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"
+Data conversion error converting "'Arellano' (ODONTOLOGO: ""APELLIDO"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO ODONTOLOGO (matricula, nombre, apellido) VALUES (?, ?, ?) [22018-214]
