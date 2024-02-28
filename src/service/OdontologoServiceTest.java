@@ -13,6 +13,7 @@ class OdontologoServiceTest {
 
     private OdontologoService odontologoService;
 
+    //iniciando y creando
     @BeforeEach
     public void setUp() {
         odontologoService = new OdontologoService();
@@ -26,7 +27,6 @@ class OdontologoServiceTest {
 
         Odontologo odontologoRecuperado = odontologoService.buscar(1);
 
-        //assertNotNull(avionRecuperado);
         assertEquals(odontologo.getMatricula(), odontologoRecuperado.getMatricula());
         assertEquals(odontologo.getNombre(), odontologoRecuperado.getNombre());
         assertEquals(odontologo.getAppellido(),odontologoRecuperado.getAppellido());
@@ -34,15 +34,16 @@ class OdontologoServiceTest {
 
     @Test
     public void testBuscarTodos() {
-        // Agregar algunos aviones a la base de datos
+        // Agregar algunos odontologos a la base de datos
         Odontologo odontologo1 = new Odontologo("123456", "Sebastian","Arellano");
-        Odontologo odontologo2 = new Odontologo("Airbus", "A320", "y7890", new java.sql.Date(new java.util.Date().getTime()));
+        Odontologo odontologo2 = new Odontologo("123456","Luca","Glass");
         odontologoService.guardar(odontologo1);
         odontologoService.guardar(odontologo2);
 
-        // Buscar todos los aviones y verificar si se recuperaron correctamente
-        List<Odontologo> aviones = odontologoService.buscarTodos();
+        // Buscar todos los odontologos y verificar si se recuperaron correctamente
+        List<Odontologo> odontologos = odontologoService.buscarTodos();
 
-        assertNotNull(aviones);
-        assertEquals(2, ((List<?>) aviones).size());
+
+        assertEquals(2, ((List<?>) odontologos).size());
     }
+}
