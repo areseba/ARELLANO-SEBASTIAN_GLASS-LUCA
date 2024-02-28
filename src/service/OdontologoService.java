@@ -16,9 +16,9 @@ public class OdontologoService {
         this.odontologoIDao = new OdontologoIDAOH2();
     }
     //creamos los metodos
-    public Odontologo guardar(Odontologo e){
+    public Odontologo guardar(Odontologo odontologo){
         //delegar la responsabilidad de guardar al DAO
-        return odontologoIDao.guardar(e);
+        return odontologoIDao.guardar(odontologo);
     }
 
     public Odontologo buscar(Integer id){
