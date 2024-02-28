@@ -29,12 +29,12 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        //levantamos el driver el driver y contactarnos
+        //levantamos el driver y contactarnos
         try {
             connection = BD.getConnection();
 
 
-            //2 crear una sentencia
+            //Creamos una sentencia
             PreparedStatement psInsert = connection.prepareStatement(SQL_INSERT,
                     Statement.RETURN_GENERATED_KEYS);
             psInsert.setString(1, odontologo.getMatricula());
@@ -42,7 +42,7 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
             psInsert.setString(3,odontologo.getAppellido());
             LOGGER.info("Odontologo: " + odontologo.getNombre() + " " + odontologo.getAppellido() + " con Matricula: " + odontologo.getMatricula() + "se ingreso correctamente ");
 
-            //ejecutar la sentencia
+            //ejecutamos la sentencia
             psInsert.executeUpdate();
 
 
@@ -68,20 +68,20 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
             throw new IllegalArgumentException("El ID no puede ser nulo");
         }
 
-        //1 levantar el driver y contactarnos
+        //levantamos el driver y conectamos
         try {
             connection = BD.getConnection();
 
 
-            //2 crear una sentencia
+            //creamos una sentencia
             preparedStatement = connection.prepareStatement(SQL_SELECT);
             preparedStatement.setLong(1, id);
 
 
-            //ejecutar la sentencia
+            //ejecutamos la sentencia
             ResultSet resultadoBuscar = preparedStatement.executeQuery();
 
-            //4 evaluar los resultados
+            //evaluamos los resultados
             while (resultadoBuscar.next()){
                 Integer idOdontologo = resultadoBuscar.getInt("id");
                 String matricula = resultadoBuscar.getString("matricula");
@@ -114,17 +114,17 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
         PreparedStatement preparedStatement = null;
         List<Odontologo> odontologos = new ArrayList();
 
-        //1 levantar el driver y contactarnos
+        //levantamos el driver y conectamos
         try {
             connection = BD.getConnection();
 
-            //2 crear una sentencia
+            //creamos una sentencia
             preparedStatement = connection.prepareStatement(SQL_SELECT_ALL);
 
-            //ejecutar la sentencia
+            //ejecutamos la sentencia
             ResultSet resultadoBuscarTodos = preparedStatement.executeQuery();
 
-            //4 evaluar los resultados
+            //evaluamos los resultados
             while (resultadoBuscarTodos.next()){
                 Integer idOdontologo = resultadoBuscarTodos.getInt("id");
                 String matricula = resultadoBuscarTodos.getString("matricula");
